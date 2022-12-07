@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/my_nave"
+        app:startDestination="@id/notesListFragment">
+
+    <fragment
+            android:id="@+id/notesListFragment"
+            android:name="dead.code.note.ui.NotesListFragment"
+            android:label="fragment_notes_list"
+            tools:layout="@layout/fragment_notes_list" >
+        <action
+                android:id="@+id/action_notesListFragment_to_noteFragment"
+                app:destination="@id/noteFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/noteFragment"
+            android:name="dead.code.note.ui.NoteFragment"
+            android:label="fragment_note"
+            tools:layout="@layout/fragment_note" >
+        <argument
+                android:name="note"
+                app:argType="dead.code.note.data.Note"
+                app:nullable="true"
+                android:defaultValue="@null" />
+    </fragment>
+</navigation>
