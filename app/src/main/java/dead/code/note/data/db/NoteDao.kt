@@ -17,7 +17,7 @@ interface NoteDao {
     @Query("SELECT * FROM Note ORDER BY noteId DESC")
     fun selectNotes(): Flow<List<Note>>
 
-    @Query("SELECT * FROM Note WHERE noteText LIKE '%'||:searchQuery||'%'")
+    @Query("SELECT * FROM Note WHERE noteTitle LIKE '%'||:searchQuery||'%'")
     fun searchInNotesTitle(searchQuery: String): Flow<List<Note>>
 
     @Query("DELETE FROM NOTE")
