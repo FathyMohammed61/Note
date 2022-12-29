@@ -1,6 +1,7 @@
 ﻿package dead.code.note.ui
 
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -65,13 +66,14 @@ class NotesListFragment : Fragment() {
         }
     }
 
+    @SuppressLint("ResourceAsColor")
     private fun setUpRecyclerView() {
         notesAdaptor = NotesAdaptor()
         binding.apply {
             rvNotes.apply {
                 layoutManager = LinearLayoutManager(context)
                 adapter = notesAdaptor
-                addItemDecoration(VerticalItemDecoration(height = 40))
+                addItemDecoration(VerticalItemDecoration(height = 30))
             }
         }
     }

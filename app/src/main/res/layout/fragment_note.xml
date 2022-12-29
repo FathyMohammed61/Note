@@ -55,7 +55,7 @@
             android:layout_marginBottom="30dp"
             android:layout_marginEnd="30dp"
             android:src="@drawable/ic_save"
-            android:backgroundTint="@color/dark_purple"
+            app:backgroundTint="@color/dark_purple"
             app:tint="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
